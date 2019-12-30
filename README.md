@@ -2,23 +2,24 @@
 
 ## Steps to build container
 
-### Unpacking
+### Downloading repo
 ```
 git clone https://github.com/sxiii/fralp
 cd fralp
 ```
 
-### Build EasyRSA container
+### Build EasyRSA container (for certificate generation)
 ```
 docker build easyrsa -t easyrsa
 ```
 
 ### Generate certificates (example client name: toshiba)
+You can specify as many clients as you want (re-run this command each time, replacing word "toshiba" with any client names you like.
 ```
 docker run -it -v pki:/easyrsa/pki easyrsa build-client-full toshiba
 ```
 
-After generating certificates and private keys, you need to copy them manually from a "pki" docker volume to your client (total of 3 files):
+After generating certificates and private keys, you need to copy them manually from a "pki" docker volume to your client machine (total of 3 files):
 * ca.crt (Central Authority Certificate)
 * toshiba.crt (Your own certificate file)
 * toshiba.key (Your own key file)
