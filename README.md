@@ -41,5 +41,5 @@ Replace CLIENT_ADDRESS with wifi-hotspot address, as long as CLIENT_SECRET and P
 Now you can configure your AP with WPA2 Enterprise, AES, the server IP and client secret.
 Use two certificates along with user private key to authenticate against freeradius tls.
 Here's how you can do it for example:
-[img](https://github.com/sxiii/fralp/raw/master/freeradius-auth.png)
+![img](https://github.com/sxiii/fralp/raw/master/freeradius-auth.png)
 
