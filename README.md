@@ -44,3 +44,9 @@ Use two certificates along with user private key to authenticate against freerad
 Here's how you can do it for example:
 ![img](https://github.com/sxiii/fralp/raw/master/freeradius-auth.png)
 
+### Windows and other P12 client configuration
+If you need a P12-type certificate (for example, to import it on windows), you can use openssl to convert your results to it like this:
+```
+openssl pkcs12 -export -out certificate.pfx -inkey toshiba.key -in toshiba.crt -certfile ca.crt
+```
+Be sure to state all 3 files correctly and you'll get "certificate.pfx" as output that you'll be able to use on windows and other OSes.
