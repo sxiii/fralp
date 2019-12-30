@@ -37,6 +37,9 @@ sudo docker run -it -p 1812:1812/udp --restart=always -v pki:/etc/raddb/certs -e
 Replace "-it" flag with "-d" to daemonize the process to background.
 Replace CLIENT_ADDRESS with wifi-hotspot address, as long as CLIENT_SECRET and PRIVATE_KEY_PASSWORD with according values.
 
+### Client configuration
 Now you can configure your AP with WPA2 Enterprise, AES, the server IP and client secret.
 Use two certificates along with user private key to authenticate against freeradius tls.
+Here's how you can do it for example:
+[img](https://github.com/sxiii/fralp/raw/master/freeradius-auth.png)
 
